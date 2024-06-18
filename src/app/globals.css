@@ -31,3 +31,54 @@ body {
     text-wrap: balance;
   }
 }
+/* styles.css or any CSS file you are using */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* styles/globals.css */
+.custom-slide-button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-slide-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-slide-button:focus {
+    outline: none;
+}
