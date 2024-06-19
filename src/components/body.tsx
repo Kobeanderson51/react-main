@@ -5,7 +5,7 @@ import Image from 'next/image'; // Import 'next/image' for optimized image loadi
 
 export default function Body() {
     const slideImages = [
-        { url: '/images/balance-tracker.png', link: 'https://react-project-one-indol.vercel.app/', text: 'Balance Tracker', additionalText: 'This Project was done with React.js' },
+        { url: '/images/balance-tracker.jpg', link: 'https://react-project-one-indol.vercel.app/', text: 'Balance Tracker', additionalText: 'This Project was done with React.js' },
         { url: '/images/todo-app.png', link: 'https://to-do-app-seven-ebon.vercel.app/', text: 'To-Do App', additionalText: 'This project was done with plain JavaScript' },
         { url: '/images/API-Server.png', link: '', text: 'API Server', additionalText: 'This Project was done with Node.js' },
         { url: '/images/Golf-app.png', link: 'https://golf-app-psi.vercel.app/', text: 'Golf App', additionalText: 'This project was done with plain JavaScript' },
