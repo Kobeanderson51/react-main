@@ -62,7 +62,7 @@ const CustomCursor: React.FC = () => {
             trail.style.transform = `translate(${x}px, ${y}px)`;
             trail.style.opacity = "1";
             trail.style.animation = "none";
-            void trail.offsetWidth; 
+            void trail.offsetWidth;
             trail.style.animation = `${trailAnimation} 0.5s ease-out forwards`;
           }, index * 50);
         }
@@ -80,7 +80,7 @@ const CustomCursor: React.FC = () => {
     <>
       <Cursor ref={cursorRef} />
       {Array.from({ length: 5 }).map((_, i) => (
-        <Trail key={i} ref={(el: HTMLDivElement | null) => (trailRefs.current[i] = el || null)} />
+        <Trail key={i} ref={el => { trailRefs.current[i] = el; }} />
       ))}
     </>
   );
