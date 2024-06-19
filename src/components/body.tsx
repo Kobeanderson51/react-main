@@ -5,10 +5,10 @@ import Image from 'next/image'; // Import 'next/image' for optimized image loadi
 
 export default function Body() {
     const slideImages = [
-        { url: '/images/balance-tracker.jpg', link: 'https://react-project-one-indol.vercel.app/', text: 'Balance Tracker', additionalText: 'This Project was done with React.js' },
-        { url: '/images/todo-app.png', link: 'https://to-do-app-seven-ebon.vercel.app/', text: 'To-Do App', additionalText: 'This project was done with plain JavaScript' },
-        { url: '/images/API-Server.png', link: '', text: 'API Server', additionalText: 'This Project was done with Node.js' },
-        { url: '/images/Golf-app.png', link: 'https://golf-app-psi.vercel.app/', text: 'Golf App', additionalText: 'This project was done with plain JavaScript' },
+        { image: '/images/balance-tracker.jpg', link: 'https://react-project-one-indol.vercel.app/', text: 'Balance Tracker', additionalText: 'This Project was done with React.js' },
+        { image: '/images/todo-app.png', link: 'https://to-do-app-seven-ebon.vercel.app/', text: 'To-Do App', additionalText: 'This project was done with plain JavaScript' },
+        { image: '/images/API-Server.png', link: '', text: 'API Server', additionalText: 'This Project was done with Node.js' },
+        { image: '/images/Golf-app.png', link: 'https://golf-app-psi.vercel.app/', text: 'Golf App', additionalText: 'This project was done with plain JavaScript' },
     ];
 
     const properties = {
@@ -26,7 +26,7 @@ export default function Body() {
                     {slideImages.map((slide, index) => (
                         <div key={index} className="each-slide relative flex justify-center z-60">
                             <a href={slide.link} target="_blank" rel="noopener noreferrer" className="relative">
-                                <Image src={slide.url} alt="slide" width={500} height={500} />
+                                <Image src={slide.image} alt="slide" width={500} height={500} />
                                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-2xl">
                                     <div>{slide.text}</div>
                                     <div className="text-lg mt-2">{slide.additionalText}</div>
