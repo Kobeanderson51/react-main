@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 const Cursor = styled.div`
   position: fixed;
@@ -28,6 +28,11 @@ const trailAnimation = keyframes`
   }
 `;
 
+// Define animation using the css helper
+const animatedTrailAnimation = css`
+  ${trailAnimation} 0.5s ease-out forwards;
+`;
+
 const Trail = styled.div`
   position: fixed;
   top: 0;
@@ -42,7 +47,6 @@ const Trail = styled.div`
   transform: translate(-50%, -50%);
   z-index: 9998;
   opacity: 0;
-  animation: ${trailAnimation} 0.5s ease-out forwards;
 `;
 
 const CustomCursor: React.FC = () => {
@@ -55,28 +59,23 @@ const CustomCursor: React.FC = () => {
       if (cursorRef.current) {
         cursorRef.current.style.transform = `translate(${x}px, ${y}px)`;
       }
-
+    
       trailRefs.current.forEach((trail, index) => {
         if (trail) {
           setTimeout(() => {
             trail.style.transform = `translate(${x}px, ${y}px)`;
             trail.style.opacity = "1";
             trail.style.animation = "none";
-            void trail.offsetWidth; 
-            trail.style.animation = `${trailAnimation} 0.5s ease-out forwards`;
+            void trail.offsetWidth;
           }, index * 50);
         }
       });
     };
 
-    const handleMouseMove = (e: MouseEvent) => {
-      moveCursor(e);
-    };
-
-    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mousemove", moveCursor);
 
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mousemove", moveCursor);
     };
   }, []);
 
@@ -84,7 +83,7 @@ const CustomCursor: React.FC = () => {
     <>
       <Cursor ref={cursorRef} />
       {Array.from({ length: 5 }).map((_, i) => (
-        <Trail key={i} ref={el => { trailRefs.current[i] = el; }} />
+        <Trail key={i} ref={(el) => { trailRefs.current[i] = el; }} />
       ))}
     </>
   );
