@@ -62,17 +62,21 @@ const CustomCursor: React.FC = () => {
             trail.style.transform = `translate(${x}px, ${y}px)`;
             trail.style.opacity = "1";
             trail.style.animation = "none";
-            void trail.offsetWidth;
+            void trail.offsetWidth; 
             trail.style.animation = `${trailAnimation} 0.5s ease-out forwards`;
           }, index * 50);
         }
       });
     };
 
-    document.addEventListener("mousemove", moveCursor);
+    const handleMouseMove = (e: MouseEvent) => {
+      moveCursor(e);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener("mousemove", moveCursor);
+      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
