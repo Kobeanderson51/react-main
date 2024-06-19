@@ -42,6 +42,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 40;
 }
 
 .modal-content {
@@ -81,4 +82,9 @@ body {
 
 .custom-slide-button:focus {
     outline: none;
+}
+
+/* styles/globals.css */
+body,html, a, button {
+  cursor: none;
 }
