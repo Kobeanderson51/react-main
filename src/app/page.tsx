@@ -11,9 +11,9 @@ const Home: React.FC = () => {
   return (
     <>
       <title>Kobe Anderson</title>
-      <link rel="icon" type="image/x-icon" href="/images/Capture3.png" />
+      <link rel="icon" href="/images/Capture3.png" />
       <CustomCursor />
-      <div className="flex h-fit flex-col items-center justify-between bg-url bg-contain">
+      <div className="flex h-fit flex-col items-center justify-between bg-url bg-contain ">
         <ModalProvider>
           <Nav />
           <Image src={logo} alt="logo" width={350} height={350} />

@@ -88,3 +88,6 @@ body {
 body,html, a, button {
   cursor: none;
 }
+*{
+  overflow: hidden;
+}

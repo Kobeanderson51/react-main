@@ -17,7 +17,7 @@ export default function Nav() {
 
     return (
         <nav className='fixed'>
-            <ul className="flex w-screen justify-center bg-red-900">
+            <ul className="flex w-screen justify-center bg-slate-900/30">
                 <li className="p-2 text-black italic hover:text-white hover:underline">
                         <a onClick={closeModal}>Home</a>
                 </li>
