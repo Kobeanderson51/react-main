@@ -7,7 +7,7 @@ export default function Body() {
     const slideImages = [
         { image: '/images/Balance-tracker.jpg', link: 'https://react-project-one-indol.vercel.app/', text: 'Balance Tracker', additionalText: 'This Project was done with React.js' },
         { image: '/images/todo-app.PNG', link: 'https://to-do-app-seven-ebon.vercel.app/', text: 'To-Do App', additionalText: 'This project was done with plain JavaScript' },
-        { image: '/images/APi-Server.PNG', link: '', text: 'API Server', additionalText: 'This Project was done with Node.js' },
+        { image: '/images/API-Server.PNG', link: '', text: 'API Server', additionalText: 'This Project was done with Node.js' },
         { image: '/images/Golf-app.PNG', link: 'https://golf-app-psi.vercel.app/', text: 'Golf App', additionalText: 'This project was done with plain JavaScript' },
     ];
 
