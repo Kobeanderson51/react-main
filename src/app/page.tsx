@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <title>Kobe Anderson</title>
       <link rel="icon" href="/images/Capture3.png" />
       <CustomCursor />
-      <div className="flex h-fit flex-col items-center justify-between bg-url bg-contain ">
+      <div className="flex flex-col items-center justify-between bg-url bg-contain h-fit overflow-y-auto">
         <ModalProvider>
           <Nav />
           <Image src={logo} alt="logo" width={350} height={350} />
