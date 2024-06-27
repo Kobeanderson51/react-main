@@ -12,8 +12,9 @@ const Body = () => {
     ];
 
     const properties = {
-        prevArrow: <button className="custom-slide-button z-30 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Previous slide">◀</button>,
-        nextArrow: <button className="custom-slide-button z-30 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Next slide">▶</button>,
+        prevArrow: <button className="custom-slide-button z-30 text-black bg-black bg-opacity-50 rounded-full hover:bg-opacity-75 focus:outline-none left-0 ml-4 md:ml-8 absolute top-1/2 transform -translate-y-1/2 px-4 py-2" aria-label="Previous slide">◀</button>,
+        nextArrow: <button className="custom-slide-button z-30 text-black bg-black bg-opacity-50 rounded-full hover:bg-opacity-75 focus:outline-none right-0 mr-4 md:mr-8 absolute top-1/2 transform -translate-y-1/2 px-4 py-2" aria-label="Next slide">▶</button>,
+        swipe: true,
     };
 
     return (
@@ -21,7 +22,7 @@ const Body = () => {
             <h1 className="text-3xl md:text-4xl text-white italic mb-6 text-center">
                 Welcome to my Projects!
             </h1>
-            <div className="container mx-auto max-w-4xl px-4 lg:px-0">
+            <div className="container mx-auto max-w-4xl px-4 lg:px-0 relative">
                 <Slide {...properties}>
                     {slideImages.map((slide, index) => (
                         <div key={index} className="each-slide relative flex justify-center mb-4">
