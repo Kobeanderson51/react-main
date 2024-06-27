@@ -11,15 +11,9 @@ const Body = () => {
         { image: '/images/Golf-app.jpg', link: 'https://golf-page-redesign.vercel.app/', text: 'Golf App', additionalText: 'This project was done with scss' },
     ];
 
-    const isMobile = () => {
-        const userAgent = typeof window.navigator === 'undefined' ? '' : window.navigator.userAgent;
-        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-    };
-
     const properties = {
-        prevArrow: isMobile() ? undefined : <button className="custom-slide-button z-30 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Previous slide">◀</button>,
-        nextArrow: isMobile() ? undefined : <button className="custom-slide-button z-30 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Next slide">▶</button>,
-        swipe: isMobile(),
+        prevArrow: <button className="custom-slide-button z-30 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Previous slide">◀</button>,
+        nextArrow: <button className="custom-slide-button z-30 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 focus:outline-none" aria-label="Next slide">▶</button>,
     };
 
     return (
