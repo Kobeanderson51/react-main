@@ -18,7 +18,7 @@ const Body = () => {
     };
 
     return (
-        <section className="flex flex-col items-center bg-black w-full py-8">
+        <div className="flex flex-col items-center bg-black w-full py-8 z-30">
             <h1 className="text-3xl md:text-4xl text-white italic mb-6 text-center">
                 Welcome to my Projects!
             </h1>
@@ -28,7 +28,7 @@ const Body = () => {
                         <div key={index} className="each-slide relative flex justify-center mb-4">
                             <a href={slide.link} target="_blank" rel="noopener noreferrer" className="relative group block">
                                 <Image src={slide.image} alt={slide.text} width={800} height={500} className="rounded-lg shadow-lg group-hover:opacity-90 transition-opacity duration-300" />
-                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                                <div className=" absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
                                     <div className="font-semibold text-xl mb-2">{slide.text}</div>
                                     <div className="text-base">{slide.additionalText}</div>
                                 </div>
@@ -37,7 +37,7 @@ const Body = () => {
                     ))}
                 </Slide>
             </div>
-        </section>
+        </div>
     );
 };
 

@@ -32,25 +32,37 @@ body {
   }
 }
 /* styles.css or any CSS file you are using */
+/* styles.css or equivalent */
+/* Nav container */
+nav {
+    z-index: 1000; /* Ensure Nav is above other content */
+}
+
+/* Modal styles */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000; /* Ensure Modal is above everything */
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 40;
+    align-items: center;
 }
 
 .modal-content {
-    background: black;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
-    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    z-index: 2010; /* Ensure Modal Content is above Modal Overlay */
 }
+
 
 .modal-close-button {
     position: absolute;
