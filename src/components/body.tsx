@@ -18,10 +18,8 @@ const Body = () => {
     };
 
     return (
-        <div className="flex flex-col items-center bg-black w-full py-8 z-30">
-            <h1 className="text-3xl md:text-4xl text-white italic mb-6 text-center">
-                Welcome to my Projects!
-            </h1>
+        <div className="flex flex-col items-center bg-black w-full h-fit py-8 z-30">
+
             <div className="container mx-auto max-w-4xl px-4 lg:px-0 relative">
                 <Slide {...properties}>
                     {slideImages.map((slide, index) => (
