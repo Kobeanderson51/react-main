@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <div className={`flex flex-col items-center justify-between bg-url bg-contain h-svh`}>
         <ModalProvider>
           <Nav />
-          <Image src={logo} alt="logo" className="w-auto h-auto"/>
+          <Image src={logo} alt="logo" className="w-auto h-auto mt-5"/>
           <Body />
         </ModalProvider>
       </div>
