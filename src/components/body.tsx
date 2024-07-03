@@ -18,17 +18,16 @@ const Body = () => {
     };
 
     return (
-        <div className="flex flex-col items-center bg-black w-full h-fit py-8 z-30">
-
-            <div className="container mx-auto max-w-4xl px-4 lg:px-0 relative">
+        <div className="flex flex-col items-center bg-black w-full h-full py-4 md:py-8 z-30">
+            <div className="container mx-auto max-w-full md:max-w-4xl px-2 md:px-4 lg:px-0 relative">
                 <Slide {...properties}>
                     {slideImages.map((slide, index) => (
-                        <div key={index} className="each-slide relative flex justify-center mb-4">
+                        <div key={index} className="each-slide relative flex justify-center m-4">
                             <a href={slide.link} target="_blank" rel="noopener noreferrer" className="relative group block">
-                                <Image src={slide.image} alt={slide.text} width={800} height={500} className="rounded-lg shadow-lg group-hover:opacity-90 transition-opacity duration-300" />
-                                <div className=" absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                                    <div className="font-semibold text-xl mb-2">{slide.text}</div>
-                                    <div className="text-base">{slide.additionalText}</div>
+                                <Image src={slide.image} alt={slide.text} layout="responsive" width={800} height={500} className="rounded-lg shadow-lg group-hover:opacity-90 transition-opacity duration-300" />
+                                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-xs md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                                    <div className="font-semibold text-lg md:text-xl mb-1 md:mb-2">{slide.text}</div>
+                                    <div className="text-xs md:text-base">{slide.additionalText}</div>
                                 </div>
                             </a>
                         </div>

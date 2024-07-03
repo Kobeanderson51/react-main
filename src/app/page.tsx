@@ -7,7 +7,6 @@ import Nav from "../components/nav";
 import Body from "../components/body";
 import { ModalProvider } from "styled-react-modal";
 import CustomCursor from "../components/customcursor";
-import ContactForm from "../components/contactform";
 import Icons from "../components/icons";
 
 const Home: React.FC = () => {
@@ -19,12 +18,10 @@ const Home: React.FC = () => {
       <div className={`flex flex-col items-center justify-between bg-url bg-contain h-svh`}>
         <ModalProvider>
           <Nav />
-          <Image src={logo} alt="logo" className="w-1/3"/>
-          <Icons />
+          <Image src={logo} alt="logo" className="w-auto h-auto"/>
           <Body />
         </ModalProvider>
       </div>
-      <ContactForm />
     </>
   );
 };
