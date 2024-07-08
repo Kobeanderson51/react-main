@@ -9,28 +9,22 @@ const ContactForm: React.FC = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        emailjs.sendForm(
-            process.env.REACT_APP_SERVICE_ID as string,
-            process.env.REACT_APP_TEMPLATE_ID as string,
-            e.currentTarget,
-            process.env.REACT_APP_PUBLIC_KEY as string
-        )
-        .then(
-            (result) => {
+        emailjs.sendForm('kobeanderson_51', 'template_glyugbj', e.currentTarget, 'IOeAL8QFE56ShkkC1')
+            .then(() => {
                 setStateMessage('Message sent!');
                 setIsSubmitting(false);
                 setTimeout(() => {
                     setStateMessage(null);
                 }, 5000); // hide message after 5 seconds
-            },
-            (error) => {
+            })
+            .catch((error) => {
+                console.error('EmailJS Error:', error);
                 setStateMessage('Something went wrong, please try again later');
                 setIsSubmitting(false);
                 setTimeout(() => {
                     setStateMessage(null);
                 }, 5000); // hide message after 5 seconds
-            }
-        );
+            });
 
         // Clears the form after sending the email
         e.currentTarget.reset();
