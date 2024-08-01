@@ -4,7 +4,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Icons: React.FC = () => {
     return (
-        <div className='flex flex-row mb-4'>
+        <div className='flex flex-row mb-4 mt-10'>
             <a href="https://github.com/Kobeanderson51" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} className='mx-2 text-3xl mb-6' />
             </a>

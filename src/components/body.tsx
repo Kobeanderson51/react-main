@@ -9,6 +9,7 @@ const Body = () => {
         { image: '/images/todo-app.PNG', link: 'https://to-do-app-seven-ebon.vercel.app/', text: 'To-Do App', additionalText: 'This project was done with plain JavaScript' },
         { image: '/images/Dashboard.PNG', link: 'https://dashboard-one-rho-82.vercel.app/', text: 'Dashboard', additionalText: 'This Project was done with scss' },
         { image: '/images/Golf-app.jpg', link: 'https://golf-page-redesign.vercel.app/', text: 'Golf App', additionalText: 'This project was done with scss and plain Javascript' },
+        { image: '/images/Capstone.PNG', link: 'https://mtechcapstone.onrender.com', text: 'Capstone Project', additionalText: 'This project was done with React.js' },
     ];
 
     const properties = {
@@ -18,7 +19,7 @@ const Body = () => {
     };
 
     return (
-        <div className="flex flex-col justify-start bg-black w-full h-full py-4 md:py-8 z-30">
+        <div className="flex flex-col justify-start w-full h-full py-4 md:py-8 z-30">
             <div className="container mx-auto max-w-full md:max-w-4xl px-2 md:px-4 lg:px-0 relative">
                 <Slide {...properties}>
                     {slideImages.map((slide, index) => (

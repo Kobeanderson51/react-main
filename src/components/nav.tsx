@@ -17,12 +17,12 @@ export default function Nav() {
     };
 
     return (
-        <nav className='fixed'>
+        <nav className='fixed bg-slate-300 bg-blur rounded top-0'>
             <ul className="flex w-screen justify-center">
-                <li className="p-2 text-black italic hover:text-white">
+                <li className="p-2 text-black italic hover:underline">
                     <a onClick={closeModal}>Home</a>
                 </li>
-                <li className="p-2 text-black italic hover:text-white">
+                <li className="p-2 text-black italic hover:underline">
                     <a 
                         href="#" 
                         onClick={() => openModal(
@@ -94,7 +94,7 @@ export default function Nav() {
                         About
                     </a>
                 </li>
-                <li className="p-2 text-black italic hover:text-white hover:underline">
+                <li className="p-2 text-black italic hover:underline">
                     <a 
                         href="#" 
                         onClick={() => openModal(
