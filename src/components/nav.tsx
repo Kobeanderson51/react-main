@@ -20,10 +20,11 @@ export default function Nav() {
         <nav className='fixed bg-slate-300 bg-blur rounded top-0'>
             <ul className="flex w-screen justify-center">
                 <li className="p-2 text-black italic hover:underline">
-                    <a onClick={closeModal}>Home</a>
+                    <a className='cursor-pointer' onClick={closeModal}>Home</a>
                 </li>
                 <li className="p-2 text-black italic hover:underline">
                     <a 
+                        className='cursor-pointer'
                         href="#" 
                         onClick={() => openModal(
                             <div className="max-w-2xl mx-auto p-6 flex flex-col justify-center">
@@ -96,6 +97,7 @@ export default function Nav() {
                 </li>
                 <li className="p-2 text-black italic hover:underline">
                     <a 
+                        className='cursor-pointer'
                         href="#" 
                         onClick={() => openModal(
                             <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">

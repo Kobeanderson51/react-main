@@ -4,7 +4,6 @@ import Link from "next/link"; // Import Link from Next.js for navigation
 import Nav from "../components/nav";
 import Body from "../components/body";
 import { ModalProvider } from "styled-react-modal";
-import CustomCursor from "../components/customcursor";
 import Icons from "../components/icons";
 import dotenv from "dotenv";
 
@@ -15,7 +14,6 @@ const Home: React.FC = () => {
     <>
       <title>Kobe Anderson</title>
       <link rel="icon" href="/images/Capture3.png" />
-      <CustomCursor />
       <div
         className="flex flex-col items-center justify-between bg-[url('/images/cool-background.png')] bg-cover bg-center min-h-screen text-white p-4"
       >

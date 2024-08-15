@@ -98,7 +98,7 @@ nav {
 
 /* styles/globals.css */
 body,html, a, button{
-  cursor: none;
+  cursor: auto;
 }
 *{
   overflow: hidden;
