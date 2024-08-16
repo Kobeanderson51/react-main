@@ -20,8 +20,8 @@ const Home: React.FC = () => {
         <ModalProvider>
           <Nav />
           <div className="flex flex-col items-center mt-10">
-            <video autoPlay loop muted playsInline className="w-auto h-48 bg-transparent">
-              <source src="../images/Kobe-Anderson.mp4" type="video/mp4" />
+            <video autoPlay loop muted playsInline className="w-auto h-48 bg-transparent rounded-lg">
+              <source src="../images/Kobe Andersonbg-white.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <Icons />

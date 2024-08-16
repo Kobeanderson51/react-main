@@ -17,7 +17,7 @@ export default function Nav() {
     };
 
     return (
-        <nav className='fixed bg-slate-300 bg-blur rounded top-0'>
+        <nav className='fixed bg-white bg-blur rounded top-0'>
             <ul className="flex w-screen justify-center">
                 <li className="p-2 text-black italic hover:underline">
                     <a className='cursor-pointer' onClick={closeModal}>Home</a>
